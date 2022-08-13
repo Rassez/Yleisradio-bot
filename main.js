@@ -12,7 +12,7 @@ const CheckRSS = async() => {
         const NewsItems = NewsFeed.items[0]
         let date = new Date().toLocaleString('fi-FI')
 
-        if (NewsItems.enclosure?.url == false) {
+        if (NewsItems.enclosure?.url) {
             var FixedURL = NewsItems.enclosure.url.substring(
                 NewsItems.enclosure.url.lastIndexOf("/") + 1
             );
